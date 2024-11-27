@@ -82,6 +82,7 @@
                             showConfirmButton: false
                         }).then(() => {
                             $('#formPelanggan')[0].reset();
+                            $('#ID_PELANGGAN').val('').trigger('change');
                         });
                     } else {
                         Swal.fire({

@@ -54,7 +54,7 @@ class Pelanggan extends BaseController
         $data = [
             'title' => 'Input Pemakaian',
             'content' => 'Halaman Input Pemakaian',
-            'id_pelanggan' => $pelangganModel->findAll(),
+            'id_pelanggan' => $pelangganModel->where('status =', 1)->findAll(),
         ];
         load_view('Pelanggan/inputPemakaian', $data);
     }
